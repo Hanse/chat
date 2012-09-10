@@ -1,6 +1,7 @@
 express = require("express")
 app     = express()
-io      = require("socket.io").listen(app.listen(8124))
+port = process.env.PORT || 8124
+io      = require("socket.io").listen(app.listen(port))
 
 app.configure ->
   app.use(express.static(__dirname + '/public'))
