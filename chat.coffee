@@ -3,6 +3,10 @@ app     = express()
 port = process.env.PORT || 8124
 io      = require("socket.io").listen(app.listen(port))
 
+io.configure ->
+  io.set("transports", ["xhr-polling"])
+  io.set("polling duration", 10)
+
 app.configure ->
   app.use(express.static(__dirname + '/public'))
   app.use(express.errorHandler(dumpExceptions: true, showStack: true ))
