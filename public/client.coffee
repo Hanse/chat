@@ -10,9 +10,11 @@ scroll = (elem) ->
     scrollHeight = Math.max(this.scrollHeight, this.clientHeight)
     this.scrollTop = scrollHeight - this.clientHeight
 
+$("#data").attr "disabled", "disabled"
 
 socket.on "connect", ->
   socket.emit "join", prompt("Name:") or "Anonymous"
+  $("#data").removeAttr "disabled"
   $("#data").focus()
 
 socket.on "update_chat", (user, data) ->
