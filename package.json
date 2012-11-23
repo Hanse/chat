@@ -1,13 +1,20 @@
 {
-  "name": "ChatRoom",
-  "version": "0.0.1",
-  "dependencies": {
-    "express": "3.0.x",
-    "socket.io": "0.9.x",
-    "coffee-script": "1.3.3"
+  "subdomain": "reflfchat",
+  "name": "reflfchat",
+  "author": "hanse",
+  "version": "0.0.3-13",
+  "scripts": {
+    "start": "./chat.coffee"
   },
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
+  },
+  "dependencies": {
+    "express": "*",
+    "supervisor": "*",
+    "socket.io": "*",
+    "stylus": "*",
+    "coffee-script": "*"
   }
 }

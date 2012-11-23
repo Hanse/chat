@@ -1,9 +1,8 @@
-A chat written in CoffeeScript using Node.js and socket.io. It includes a server and a client.
+# Chat
+A tiny chat written in CoffeeScript.
 
-Run it with `foreman start`. You'll need the `foreman` gem to do that.
+	  git clone Hanse/chat
+	  cd chat/
+	  npm install
 
-Now go to `http://localhost:8124/` to see the chat in its full glory.
-
-client: coffee --watch --compile --output ./public ./public
-server: coffee --watch --bare chat.coffee
-compass: compass watch .
+	  foreman start
